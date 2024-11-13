@@ -1,0 +1,4 @@
+Recovered manifest with next_file=154 manifest_num=153 log_num=152 prev_log_num=0 last_seq=0
+Recovering log file "\\\\?\\D:\\cwasm\\vm\\block-wasm\\data\\ledger.db\\000152.log"
+Deleting file type=Log num=152
+Deleting file type=Descriptor num=151

@@ -1,0 +1,19 @@
+[package]
+name = "evm"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+revm = { version = "3" }
+revm-primitives = "1.1"
+
+
+[[bin]]
+name = "evm_bin"
+path = "src/main.rs"
+
+[lib]
+name = "evm"
+path = "src/lib.rs"

@@ -1,0 +1,4 @@
+ {
+    "owner": {"Contract":["0xdce0c7cb2b3265fbc1ee2d5092bcbb8d50d9e3af"]},
+    "callback": {"contract": "erc721", "func": "callbak"}
+  }

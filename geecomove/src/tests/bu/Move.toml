@@ -1,0 +1,9 @@
+[package]
+name = "test_package"
+version = "0.0.1"
+upgrade_policy = "compatible"
+
+[dependencies]
+AptosFramework = { local = "../../../aptos-move/framework/aptos-framework" }
+[addresses]
+coin_address = '0xf6b02a2d47b84e845b7e3623355f041bcb36daf1'

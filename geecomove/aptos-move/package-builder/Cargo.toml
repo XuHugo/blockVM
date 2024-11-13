@@ -1,0 +1,13 @@
+[package]
+name = "aptos-package-builder"
+description = "Helper for building Move packages for tests"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.62"
+aptos-framework = { path = "../framework" }
+itertools = "0.10.3"
+move-command-line-common = { git = "https://github.com/move-language/move", rev = "81d19fce20d73675b7ac129abe6b6797513cc8d0" }
+move-package = { git = "https://github.com/move-language/move", rev = "81d19fce20d73675b7ac129abe6b6797513cc8d0" }
+tempfile = "3.3.0"

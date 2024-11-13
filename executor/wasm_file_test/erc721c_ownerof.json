@@ -1,0 +1,4 @@
+ {
+    "token_id": 9,
+    "callback": {"contract": "erc721", "func": "ownerof"}
+  }

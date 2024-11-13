@@ -1,0 +1,32 @@
+[package]
+name = "block-wasm"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.42"
+wasmtime ={version = "0.29.0"}
+serde_json = { version = "1.0.81", features = ["preserve_order"] }
+serde = { version = "1.0.137", features = ["derive", "rc"] }
+
+executor = { path = "../executor",version = "0.1.0"}
+block-executor = { path = "../block-executor",version = "0.1.0"}
+geeco-mvhashmap = { path = "../mvhashmap",version = "0.1.0"}
+aptos-types = { path = "../geecomove/types",version = "0.0.3"}
+aptos-state-view = { path = "../geecomove/storage/state-view",version = "0.1.0"}
+aptos-aggregator = { path = "../geecomove/aptos-move/aptos-aggregator" }
+storage = { path = "../storage",version = "0.1.0"}
+msp = { path = "../msp",version = "0.1.0"}
+
+move-core-types = { git = "https://github.com/move-language/move", rev = "81d19fce20d73675b7ac129abe6b6797513cc8d0", features = ["address20"] }
+
+[dependencies.wasm-chain-integration]
+version = "0.1"
+path = "../concordium/wasm-chain-integration/"
+
+[dependencies.concordium-contracts-common]
+version = "0.4.1"
+path = "../concordium/concordium-contracts-common"
+features = ["derive-serde"]

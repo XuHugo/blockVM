@@ -1,0 +1,18 @@
+[package]
+name = "aptos-state-view"
+description = "Aptos state view"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.62"
+aptos-crypto = { path = "../../crates/aptos-crypto" }
+aptos-types = { path = "../../types" }
+bcs = { git = "https://github.com/aptos-labs/bcs.git", rev = "d31fab9d81748e2594be5cd5cdf845786a30562d" }
+serde = { version = "1.0.137", features = ["derive", "rc"] }
+serde_bytes = "0.11.6"
+serde_json = { version = "1.0.81", features = ["preserve_order"] }
+
+[features]
+default = []
+fuzzing = ["aptos-types/fuzzing"]

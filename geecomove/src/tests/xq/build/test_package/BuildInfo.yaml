@@ -1,0 +1,27 @@
+---
+compiled_package_info:
+  package_name: test_package
+  address_alias_instantiation:
+    Extensions: "0000000000000000000000000000000000000000000000000000000000000001"
+    aptos_framework: "0000000000000000000000000000000000000000000000000000000000000001"
+    aptos_std: "0000000000000000000000000000000000000000000000000000000000000001"
+    aptos_token: "0000000000000000000000000000000000000000000000000000000000000003"
+    core_resources: 000000000000000000000000000000000000000000000000000000000a550c18
+    std: "0000000000000000000000000000000000000000000000000000000000000001"
+    vm_reserved: "0000000000000000000000000000000000000000000000000000000000000000"
+  source_digest: 7D3614F7FBBC78CC9A8A6C64F90C70D058B446A4016EB8FD86AD44DD05038ECB
+  build_flags:
+    dev_mode: false
+    test_mode: false
+    generate_docs: false
+    generate_abis: false
+    install_dir: ~
+    force_recompilation: false
+    additional_named_addresses: {}
+    architecture: ~
+    fetch_deps_only: false
+    skip_fetch_latest_git_deps: false
+dependencies:
+  - AptosFramework
+  - AptosStdlib
+  - MoveStdlib

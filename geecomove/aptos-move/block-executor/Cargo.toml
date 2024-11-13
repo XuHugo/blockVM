@@ -1,0 +1,35 @@
+[package]
+name = "aptos-block-executor"
+description = "Aptos block transaction executor library, parallel execution via Block-STM"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.62"
+aptos-aggregator = { path = "../aptos-aggregator" }
+aptos-mvhashmap = { path = "../mvhashmap" }
+aptos-state-view = { path = "../../storage/state-view" }
+aptos-types = { path = "../../types" }
+arc-swap = "1.5.0"
+bcs = { git = "https://github.com/aptos-labs/bcs.git", rev = "d31fab9d81748e2594be5cd5cdf845786a30562d" }
+
+criterion = "0.3.5"
+crossbeam = "0.8.1"
+crossbeam-queue = "0.3.5"
+dashmap = "5.2.0"
+num_cpus = "1.13.1"
+once_cell = "1.10.0"
+proptest = "1.0.0"
+proptest-derive = "0.3.0"
+rayon = "1.5.2"
+prometheus = { version = "0.13.0", default-features = false }
+
+[dev-dependencies]
+claims = "0.7"
+criterion = "0.3.5"
+proptest = "1.0.0"
+proptest-derive = "0.3.0"
+rand = "0.7.3"
+
+
+

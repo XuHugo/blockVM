@@ -1,0 +1,16 @@
+[package]
+name = "revm_runner"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hex = { version = "0.4", default-features = false, features = [ "alloc" ]  }
+revm = { version = "3.3.0" }
+bytes = { version = "1.4", default-features = false }
+
+[dev-dependencies]
+criterion = "0.3"
+
+[[bench]]
+name = "revm_benchmark"
+harness = false

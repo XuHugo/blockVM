@@ -1,0 +1,51 @@
+# This is a TOML document. Boom.
+network_id = 8108773
+chain_id = "abc"
+chain_hub = "bbc"
+ssl_enable = false
+address = "4qGpgAhkMueLN92fL1C39nCXtxNR9dnLyD6ypAsBQtoj"
+node_private_key = "2f1e7b7a130d7ba9da0068b3bb0ba1d79e7e77110302c9f746c3c2a63fe40088"
+key_version = 12356
+ledger_close_interval = 10
+
+[consensus]
+consensus_type ="pbft"
+solo_consensus_is_validator = true
+
+[ssl]
+chain_file = "config/node.crt"
+private_key_file =  "config/node.pem"
+private_password = "42001df2a1f54974baa38073eae2ee53"
+dhparam_file = "config/dh2048.pem"
+verify_file = "config/ca.crt"
+
+[p2p_network]
+heartbeat_interval = 60
+listen_addr = "0.0.0.0:19333"
+target_peer_connection = 50
+max_connection = 2000
+connect_timeout = 5
+known_peers = ["10.119.10.48:19333","10.119.10.48:19334"]
+
+[db]
+db_type = "leveldb"
+key_vaule_max_open_files = 6
+account_db_path = "data/account.db"
+ledger_db_path = "data/ledger.db"
+key_value_db_path = "data/key_value.db"
+rational_string = ""
+rational_db_type = "mysql"
+tmp_path = ""
+async_write_sql = false
+async_write_kv = false
+
+[log_config]
+dir = "log/manger.log"
+
+[genesis_block]
+genesis_account = "adxSp1X4V7hXDDRBKHL6U21CpbPhki7YqjuUd" #privbtBp152KnunKvCBgFQX96zuASSH6FBY9KVTX1bifPCLUWarq9EaN
+fee_base_reserve = 10000000
+fee_gas_price = 1000
+validators = ["9VTv5gGYEAgGDD68wW6W2soGmVj9BdFJLrQWawh2kW65","4qGpgAhkMueLN92fL1C39nCXtxNR9dnLyD6ypAsBQtoj"]
+#51b845c2cdde22fe646148f0b51eaf5feec8c82ee921d5e0cbe7619f3bb9c62d,9VTv5gGYEAgGDD68wW6W2soGmVj9BdFJLrQWawh2kW65
+

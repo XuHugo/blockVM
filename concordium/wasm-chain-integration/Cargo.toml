@@ -1,0 +1,44 @@
+[package]
+name = "wasm-chain-integration"
+version = "0.1.0"
+authors = ["Concordium <developers@concordium.com>"]
+edition = "2018"
+license-file = "../LICENSE-MPL-2.0"
+
+[features]
+# If this feature is enabled  the ffi exports are going to be produced
+# for use from Haskell.
+enable-ffi = []
+default=["enable-ffi"]
+#fuzz = ["arbitrary", "wasm-smith", "wasmprinter"]
+fuzz = ["arbitrary"]
+fuzz-coverage = ["wasm-transform/fuzz-coverage"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+libc = "0.2"
+anyhow = "1.0.33"
+serde = "1.0"
+arbitrary = { version = "0.4.6", features = ["derive"], optional = true }
+#wasm-smith = { git = "https://github.com/Concordium/wasm-tools.git", branch = "mra/fuzzing", optional = true }
+#wasmprinter = { git = "https://github.com/Concordium/wasm-tools.git", branch = "main", optional = true }
+storage = { path = "../../storage",version = "0.1.0"}
+
+[dependencies.wasm-transform]
+path = "../wasm-transform"
+version = "0"
+
+[dependencies.concordium-contracts-common]
+version = "0.4.1"
+path = "../concordium-contracts-common"
+features = ["derive-serde"]
+
+[lib]
+crate-type = ["cdylib", "staticlib", "rlib"]
+
+[dev-dependencies]
+criterion = { version = ">=0.3.4", features = ["html_reports"] }
+
+[[bench]]
+name = "wasm"
+harness = false

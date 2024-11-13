@@ -1,0 +1,8 @@
+[package]
+name = "aptos-gas-algebra-ext"
+description = "Gas Algebra Ext"
+version = "0.0.1"
+edition = "2021"
+
+[dependencies]
+move-core-types = { git = "https://github.com/move-language/move", rev = "81d19fce20d73675b7ac129abe6b6797513cc8d0", features = ["address32"] }

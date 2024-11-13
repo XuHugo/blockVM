@@ -1,0 +1,55 @@
+[package]
+name = "geecomove"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+aptos-block-executor = { path = "aptos-move/block-executor" }
+aptos-cached-packages = { path = "aptos-move/framework/cached-packages" }
+aptos-crypto = { path = "crates/aptos-crypto" }
+aptos-framework = { path = "aptos-move/framework" }
+aptos-gas = { path = "aptos-move/aptos-gas", features = ["testing"] }
+aptos-state-view = { path = "storage/state-view" }
+aptos-types = { path = "types" }
+aptos-vm = { path = "aptos-move/aptos-vm" }
+aptos-vm-genesis = { path = "aptos-move/vm-genesis" }
+aptos-api-types = { path = "api/types" }
+
+bcs = { git = "https://github.com/aptos-labs/bcs.git", rev = "d31fab9d81748e2594be5cd5cdf845786a30562d" }
+
+itertools = "0.10.3"
+move-binary-format = { git = "https://github.com/move-language/move", rev = "81d19fce20d73675b7ac129abe6b6797513cc8d0" }
+move-bytecode-verifier = { git = "https://github.com/move-language/move", rev = "81d19fce20d73675b7ac129abe6b6797513cc8d0" }
+move-core-types = { git = "https://github.com/move-language/move", rev = "81d19fce20d73675b7ac129abe6b6797513cc8d0", features = [
+    "address20",
+] }
+move-ir-compiler = { git = "https://github.com/move-language/move", rev = "81d19fce20d73675b7ac129abe6b6797513cc8d0" }
+move-resource-viewer = { git = "https://github.com/move-language/move", rev = "81d19fce20d73675b7ac129abe6b6797513cc8d0" }
+
+proptest = "1.0.0"
+serde = { version = "1.0.137", features = ["derive", "rc"] }
+anyhow = "1.0.62"
+aptos-bitvec = { path = "crates/aptos-bitvec" }
+hex = "0.4.3"
+move-command-line-common = { git = "https://github.com/move-language/move", rev = "81d19fce20d73675b7ac129abe6b6797513cc8d0" }
+move-vm-types = { git = "https://github.com/move-language/move", rev = "81d19fce20d73675b7ac129abe6b6797513cc8d0" }
+num_cpus = "1.13.1"
+once_cell = "1.10.0"
+proptest-derive = "0.3.0"
+rand = "0.7.3"
+move-package = { git = "https://github.com/move-language/move", rev = "81d19fce20d73675b7ac129abe6b6797513cc8d0" }
+move-symbol-pool = { git = "https://github.com/move-language/move", rev = "81d19fce20d73675b7ac129abe6b6797513cc8d0" }
+project-root = "0.2.2"
+
+thiserror = "1.0.37"
+base64 = "0.13.0"
+serde_yaml = "0.8.24"
+dirs = "4.0.0"
+clap = { version = "3.2.17", features = ["derive", "env", "suggestions"] }
+serde_json = { version = "1.0.81", features = ["preserve_order"] }
+ureq = { version = "1.5.4", features = [
+    "json",
+    "native-tls",
+], default_features = false }

@@ -1,0 +1,20 @@
+[package]
+name = "msp"
+version = "0.1.0"
+authors = ["Song.Shang <Song.Shang@geely.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hex = "0.3"
+secp256k1 = "0.7.1"
+rust-crypto = "0.2.36"
+ed25519-dalek = "=1.0.0"
+curve25519-dalek = "3.0"
+rand = "=0.7"
+bs58 = "0.4.0"
+log = "0.4.14"
+
+lazy_static = "1.4.0"
+parking_lot = "0.11"

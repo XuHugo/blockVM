@@ -1,0 +1,6 @@
+Recovered manifest with next_file=315 manifest_num=314 log_num=313 prev_log_num=0 last_seq=268
+Recovering log file "\\\\?\\D:\\cwasm\\vm\\block-wasm\\data\\account.db\\000313.log"
+Start write of L0 table 000315
+L0 table 000315 has 168446 bytes
+Deleting file type=Log num=313
+Deleting file type=Descriptor num=311

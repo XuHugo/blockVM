@@ -1,0 +1,4 @@
+Recovered manifest with next_file=158 manifest_num=157 log_num=156 prev_log_num=0 last_seq=0
+Recovering log file "\\\\?\\D:\\cwasm\\vm\\block-wasm\\data\\key_value.db\\000156.log"
+Deleting file type=Log num=156
+Deleting file type=Descriptor num=155
